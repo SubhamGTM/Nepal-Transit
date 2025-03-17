@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepal Transit Pro | Official Route Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-route"></i>
+                <h1>Nepal Transit</h1>
+            </div>
+            <nav class="navbar" id="navbar">
+                <a href="#home">Home</a>
+                <a href="#routes">Routes</a>
+                <a href="#map">Map</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Plan Your Journey Across Nepal</h2>
+            <div class="search-box">
+                <input type="text" id="originInput" placeholder="Enter starting point">
+                <input type="text" id="destinationInput" placeholder="Enter destination">
+                <button onclick="calculateRoute()">Search Routes</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="routes">
+        <div class="container">
+            <div class="route-card">
+                <h3>Kathmandu → Pokhara</h3>
+                <p><strong>Distance:</strong> 202 km</p>
+                <p><strong>Duration:</strong> 6-7 hours</p>
+                <p><strong>Route:</strong> Prithvi Highway</p>
+            </div>
+
+            <div class="route-card">
+                <h3>Pokhara → Chitwan</h3>
+                <p><strong>Distance:</strong> 175 km</p>
+                <p><strong>Duration:</strong> 5-6 hours</p>
+                <p><strong>Route:</strong> Siddhartha Highway</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <h2>Interactive Route Map</h2>
+            <div id="map"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Nepal Transit Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
