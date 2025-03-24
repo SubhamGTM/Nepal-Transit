@@ -6,8 +6,9 @@
     <title>Nepal Transit Pro | Official Route Planner</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google Maps API -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -30,18 +31,18 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="container">
             <h2>Plan Your Journey Across Nepal</h2>
             <div class="search-box">
                 <input type="text" id="originInput" placeholder="Enter starting point">
                 <input type="text" id="destinationInput" placeholder="Enter destination">
-                <button onclick="calculateRoute()">Search Routes</button>
+                <button id="searchBtn">Search Routes</button>
             </div>
         </div>
     </section>
 
-    <section class="routes">
+    <section class="routes" id="routes">
         <div class="container">
             <div class="route-card">
                 <h3>Kathmandu → Pokhara</h3>
@@ -59,7 +60,7 @@
         </div>
     </section>
 
-    <section class="map-section">
+    <section class="map-section" id="map">
         <div class="container">
             <h2>Interactive Route Map</h2>
             <div id="map"></div>
@@ -68,10 +69,8 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2023 Nepal Transit Pro. All rights reserved.</p>
+            <p>&copy; 2025 Nepal Transit Pro. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
